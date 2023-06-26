@@ -8,9 +8,6 @@ import pdb
 
 df = pd.read_csv('crypto_combine.csv')
 df['Date'] = df['Date'].apply(lambda x: pd.to_datetime(x))
-df.set_index('Date', inplace=True)
-df = df.drop(['2022-01-01', '2018-01-12', '2022-01-02', '2022-12-31', '2020-12-02', '2022-01-01', '2018-01-12', '2022-01-02', '2022-12-31','2020-12-02', '2022-01-01', '2018-01-12', '2022-01-02', '2022-12-31', '2020-12-02'], axis=0)
-df.reset_index(inplace=True)
 df.dropna(inplace=True)
 df['Media'] = (df['High'] + df['Low']) / 2
 
