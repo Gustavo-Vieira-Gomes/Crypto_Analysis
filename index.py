@@ -44,7 +44,7 @@ app.layout = dbc.Container([
         dbc.Col([
             dbc.Card([
                 dbc.CardHeader([
-                    html.Legend('Criptocurrency Analysis', style={'text-align': 'center'})
+                    html.Legend('Criptocurrency Analysis', style={'text-align': 'center', 'font-size': '20px'})
                 ]),
                 dbc.CardBody([
                     ThemeSwitchAIO(aio_id='theme-swich', themes=[theme1, theme2]),
@@ -355,4 +355,4 @@ def general_graph(dataframe, toggle):
     return fig
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, port='8080', host='0.0.0.0')
